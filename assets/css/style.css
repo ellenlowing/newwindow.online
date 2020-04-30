@@ -1,0 +1,20 @@
+@font-face {
+  font-family: matura;
+  src: url('../font/MATURASC.TTF') format('truetype');
+}
+
+html, body {
+  background-image: url('../img/bg.png');
+  color: #000;
+  font-family: "matura", serif;
+  font-size: 3vw;
+  text-align:center;
+  text-transform: uppercase;
+}
+
+iframe {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
