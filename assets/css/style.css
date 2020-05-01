@@ -19,6 +19,7 @@ html, body {
   font-family: "matura", serif;
   font-size: 3.5vw;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   text-align: center;
   text-transform: uppercase;
@@ -43,7 +44,7 @@ iframe {
   position: relative;
 }
 .marquee {
-  animation: carousel 6s linear infinite;
+  animation: carousel 8s linear infinite;
   font-size: 3.5vw;
   position: absolute;
   width: 100vw;
