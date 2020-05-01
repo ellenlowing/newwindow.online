@@ -6,6 +6,10 @@ $(document).ready(() => {
 	mobileMode = isMobile();
 	init();
 });
+$(window).resize(() => {
+	console.log('resize');
+	// setcarousel();
+})
 
 function init() {
 	// Load Youtube API
@@ -14,6 +18,7 @@ function init() {
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+	// setcarousel();
   if(mobileMode) {
     // $('iframe').css({
     //   'transform': 'rotate(-90deg) translateX(+50vw) translateX(-50vh) translateY(-50vh) translateY(50vw)',
@@ -22,6 +27,15 @@ function init() {
 		// 	'height': '100vw'
     // })
   }
+}
+
+function setcarousel() {
+	let elem = $('.carousel-el');
+	elem.each( function() {
+		let w = (parseInt($(this).width()) + 60);
+		console.log(w);
+		$(this).css('textShadow', '#000 ' + w.toString() + 'px 0px');
+	});
 }
 
 function isMobile() {

@@ -3,6 +3,15 @@
   src: url('../font/MATURASC.TTF') format('truetype');
 }
 
+@keyframes carousel {
+  from {
+    transform: translate(0,0);
+  }
+  to {
+    transform: translate(calc(-100%),0);
+  }
+}
+
 html, body {
   background-image: url('../img/bg.png');
   background-attachment: fixed;
@@ -23,6 +32,16 @@ iframe {
   object-fit: fill;
   object-position: center;
   transform-origin: center center;
+}
+.carousel-el {
+  animation: carousel 6s linear infinite;
+  display: inline-block;
+  padding-right: 60px;
+  text-shadow: #000 calc(91vw + 61px) 0px;
+  white-space: nowrap;
+  overflow: visible;
+  -o-text-overflow: inherit;
+  text-overflow: inherit;
 }
 
 .imsg-container {
