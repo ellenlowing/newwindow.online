@@ -18,11 +18,31 @@ html, body {
   color: #000;
   font-family: "matura", serif;
   font-size: 3.5vw;
-  margin: 0 1vw;
   overflow-x: hidden;
   padding: 0;
   text-align: center;
   text-transform: uppercase;
+}
+main {
+  margin: 0 2vw;
+}
+.heartglobe {
+  cursor: url('../img/stickers/heartglobe64.png') 32 32, auto;
+}
+.angels {
+  cursor: url('../img/stickers/angels64.png') 32 32, auto;
+}
+.brokenchain {
+  cursor: url('../img/stickers/brokenchain64.png') 32 32, auto;
+}
+.flower {
+  cursor: url('../img/stickers/flower64.png') 32 32, auto;
+}
+.pinkyswear {
+  cursor: url('../img/stickers/pinkyswear64.png') 32 32, auto;
+}
+.window {
+  cursor: url('../img/stickers/window64.png') 32 32, auto;
 }
 h1 {
   color: black;
@@ -217,6 +237,17 @@ iframe {
   background-position: 0 2.92vw;
 }
 
+.content-stickers {
+  position: absolute;
+}
+.sticker {
+  display: none;
+  height: auto;
+  position: absolute;
+  width: 64px;
+  z-index: 0;
+}
+
 @media all and (max-width: 768px) {
   @keyframes carousel {
     from {
@@ -226,13 +257,16 @@ iframe {
       transform: translate(calc(-140vw),0);
     }
   }
+  html, body {
+    margin: 0 3vw;
+  }
   .content {
     display: block;
     grid-template-columns: unset;
   }
   .content-right {
     height: auto;
-    padding-top: 0;
+    padding-top: 6vw;
   }
   .marquee {
     animation-duration: 12s;
@@ -253,7 +287,7 @@ iframe {
     transform-origin: center;
   }
   .social-container {
-    height: 80vw;
+    height: 75vw;
     margin: 0 auto;
     margin-top: -12vw;
     transform: scale(1.4, 1.4);

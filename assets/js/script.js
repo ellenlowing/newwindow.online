@@ -1,14 +1,20 @@
+const stickers = ['heartglobe', 'angels', 'brokenchain', 'flower', 'pinkyswear', 'window'];
 let mobileMode;
 let player;
 let playerState;
+let zidx = 2;
 
 $(document).ready(() => {
 	mobileMode = isMobile();
 	init();
 });
-$(window).resize(() => {
-  // resizeHandler();
-})
+$(window).bind('mousedown', (e) => {
+  stamp(e);
+});
+$(window).resize(() => {});
+// $(window).mousemove(function(e){
+//   $('.follow').css({'top': e.clientY-100, 'left': e.clientX-100});
+// });
 
 function init() {
 	// Load Youtube API
@@ -34,12 +40,22 @@ function setMarquee(state) {
     style = marquees[i].style;
     if(state == 1) style.webkitAnimationPlayState = 'running';
     else style.webkitAnimationPlayState = 'paused';
-    // if(style.webkitAnimationPlayState === 'running') {
-    //   style.webkitAnimationPlayState = 'paused';
-    // } else {
-    //   style.webkitAnimationPlayState = 'running';
-    // }
   }
+}
+
+function stamp (e) {
+  let label = $('main').attr('class');
+  let sticker = $('#sticker-' + label);
+  let clone = sticker.clone().css({
+    'top': ( (e.clientY-32) / window.innerWidth * 100).toString() + 'vw',
+    'left': ( (e.clientX-32) / window.innerWidth * 100).toString() + 'vw',
+    'zIndex': zidx
+  }).show();
+  zidx += 1;
+  $('.content').after(clone);
+  let idx = Math.floor(Math.random() * Math.floor(stickers.length));
+  // let newsticker = stickers[idx];
+  $('main').removeClass(label).addClass(stickers[idx]);
 }
 
 function isMobile() {
@@ -61,8 +77,6 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerStateChange(event) {
 	playerState = event.data;
-  // toggleMarquee();
-	console.log(playerState);
   if (event.data == YT.PlayerState.PLAYING || event.data == YT.PlayerState.BUFFERING) {
     setMarquee(0);
   } else {
