@@ -8,13 +8,10 @@ $(document).ready(() => {
 	mobileMode = isMobile();
 	init();
 });
-$(window).bind('mousedown', (e) => {
+$(window).bind('mousedown touchstart', (e) => {
   stamp(e);
 });
 $(window).resize(() => {});
-// $(window).mousemove(function(e){
-//   $('.follow').css({'top': e.clientY-100, 'left': e.clientX-100});
-// });
 
 function init() {
 	// Load Youtube API
