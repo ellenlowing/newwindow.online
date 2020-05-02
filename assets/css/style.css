@@ -29,7 +29,6 @@ h1 {
   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  max-width: 100vw;
 }
 .iframe-wrapper {
   position: relative;
@@ -54,14 +53,13 @@ iframe {
   padding-top: 25vw;
   height: calc(70vw * 0.6);
   overflow: hidden;
-  /* margin-bottom: -20vw; */
 }
 .marquee-container {
   padding: 3vw 0 6vw 0;
   position: relative;
 }
 .marquee {
-  animation: carousel 8s linear infinite;
+  animation: carousel 9s linear infinite;
   font-size: 3.5vw;
   position: absolute;
   width: 100vw;
@@ -147,6 +145,7 @@ iframe {
 
 .social-container {
   position: relative;
+  height: 35vw;
 }
 .social-item {
   background-position: 0 0;
@@ -155,8 +154,12 @@ iframe {
   display: block;
   margin: 12px auto;
   position: absolute;
-  /* transform: scale(0.7,0.7); */
-  /* transform-origin: top left; */
+}
+#social-container-og {
+  display: block;
+}
+#social-container-clone {
+  display: none;
 }
 #social-ig {
   background: url('../img/ig_f.png');
@@ -215,12 +218,51 @@ iframe {
 }
 
 @media all and (max-width: 768px) {
+  @keyframes carousel {
+    from {
+      transform: translate(0,0);
+    }
+    to {
+      transform: translate(calc(-140vw),0);
+    }
+  }
   .content {
     display: block;
     grid-template-columns: unset;
   }
-
+  .content-right {
+    height: auto;
+    padding-top: 0;
+  }
+  .marquee {
+    animation-duration: 12s;
+    font-size: 5vw;
+    overflow: visible;
+    white-space: nowrap;
+    width: 140vw;
+  }
+  .marquee-offset {
+    left: 140vw;
+  }
+  .marquee-container {
+    padding: 3vw 0 8vw 0;
+  }
   .imsg-container {
+    margin: 0 auto;
     transform: scale(1, 1);
+    transform-origin: center;
+  }
+  .social-container {
+    height: 80vw;
+    margin: 0 auto;
+    margin-top: -12vw;
+    transform: scale(1.4, 1.4);
+    transform-origin: top left;
+  }
+  #social-container-og {
+    display: none;
+  }
+  #social-container-clone {
+    display: block;
   }
 }

@@ -7,7 +7,7 @@ $(document).ready(() => {
 	init();
 });
 $(window).resize(() => {
-	console.log('resize');
+  // resizeHandler();
 })
 
 function init() {
