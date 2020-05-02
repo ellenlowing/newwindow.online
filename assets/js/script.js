@@ -47,8 +47,8 @@ function stamp (e) {
   let label = $('main').attr('class');
   let sticker = $('#sticker-' + label);
   let clone = sticker.clone().css({
-    'top': ( (e.clientY-32) / window.innerWidth * 100).toString() + 'vw',
-    'left': ( (e.clientX-32) / window.innerWidth * 100).toString() + 'vw',
+    'top': ( (e.pageY-32) / window.innerWidth * 100).toString() + 'vw',
+    'left': ( (e.pageX-32) / window.innerWidth * 100).toString() + 'vw',
     'zIndex': zidx
   }).show();
   zidx += 1;
