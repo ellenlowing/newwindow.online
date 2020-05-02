@@ -8,7 +8,7 @@ $(document).ready(() => {
 	mobileMode = isMobile();
 	init();
 });
-$(window).bind('mousedown touchstart', (e) => {
+$(window).bind('mousedown touchend', (e) => {
   stamp(e);
 });
 $(window).resize(() => {});
@@ -43,15 +43,24 @@ function setMarquee(state) {
 function stamp (e) {
   let label = $('main').attr('class');
   let sticker = $('#sticker-' + label);
+	let top, left;
+	if(e.pageX && e.pageY) {
+		top = ( (e.pageY-32) / window.innerWidth * 100).toString() + 'vw';
+		left = ( (e.pageX-32) / window.innerWidth * 100).toString() + 'vw';
+	} else {
+		let touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+		top = ( (touch.pageY-32) / window.innerWidth * 100).toString() + 'vw';
+		left = ( (touch.pageX-32) / window.innerWidth * 100).toString() + 'vw';
+		console.log(touch.pageX, touch.pageY);
+	}
   let clone = sticker.clone().css({
-    'top': ( (e.pageY-32) / window.innerWidth * 100).toString() + 'vw',
-    'left': ( (e.pageX-32) / window.innerWidth * 100).toString() + 'vw',
+    'top': top,
+    'left': left,
     'zIndex': zidx
   }).show();
   zidx += 1;
-  $('.content').after(clone);
+	$('.content').after(clone);
   let idx = Math.floor(Math.random() * Math.floor(stickers.length));
-  // let newsticker = stickers[idx];
   $('main').removeClass(label).addClass(stickers[idx]);
 }
 
