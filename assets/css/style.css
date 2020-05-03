@@ -344,8 +344,11 @@ iframe {
   .social-container {
     height: 60vw;
     margin: 0 auto;
-    margin-bottom: 6vw;
-    transform: scale(1.25, 1.25);
-    transform-origin: top left;
+    /* margin-bottom: 6vw; */
+    /* transform: scale(1.25, 1.25);
+    transform-origin: top left; */
+  }
+  .social-item {
+    font-size: 4.5vw;
   }
 }
