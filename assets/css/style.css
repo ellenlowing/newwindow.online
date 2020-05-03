@@ -55,6 +55,30 @@ a:visited {
 .window {
   cursor: url('../img/stickers/window64.png') 32 32, auto;
 }
+.record {
+  cursor: url('../img/stickers/record64.png') 32 32, auto;
+}
+.computermouse {
+  cursor: url('../img/stickers/computermouse64.png') 32 32, auto;
+}
+.twinkles1 {
+  cursor: url('../img/stickers/twinkles164.png') 32 32, auto;
+}
+.twinkles5 {
+  cursor: url('../img/stickers/twinkles564.png') 32 32, auto;
+}
+.dice {
+  cursor: url('../img/stickers/dice64.png') 32 32, auto;
+}
+.flower2 {
+  cursor: url('../img/stickers/flower264.png') 32 32, auto;
+}
+.squiggle1 {
+  cursor: url('../img/stickers/squiggle164.png') 32 32, auto;
+}
+.squiggle3 {
+  cursor: url('../img/stickers/squiggle364.png') 32 32, auto;
+}
 h1 {
   color: black;
   -webkit-text-fill-color: white; /* Will override color (regardless of order) */

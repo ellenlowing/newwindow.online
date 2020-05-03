@@ -1,4 +1,4 @@
-const stickers = ['heartglobe', 'angels', 'brokenchain', 'flower', 'pinkyswear', 'window'];
+const stickers = ['heartglobe', 'angels', 'brokenchain', 'flower', 'pinkyswear', 'window', 'record', 'computermouse', 'twinkles1', 'twinkles5', 'dice', 'flower2', 'squiggle1', 'squiggle3'];
 let mobileMode;
 let player;
 let playerState;
