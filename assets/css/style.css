@@ -136,6 +136,7 @@ iframe {
   height: 70vw;
   padding-top: 9vw;
   margin-left: 2vw;
+  margin-bottom: -30vw;
   position: relative;
   transform-origin: top left;
   transform: scale(0.6, 0.6);
