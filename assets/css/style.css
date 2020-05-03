@@ -34,8 +34,8 @@ a:active,
 a:visited {
   outline: none;
   text-decoration: none;
-  /* color: purple; */
-  /* -webkit-text-stroke-color: purple; */
+  color:#551a8b;
+  -webkit-text-stroke-color:	#551a8b;
 }
 .heartglobe {
   cursor: url('../img/stickers/heartglobe64.png') 32 32, auto;
