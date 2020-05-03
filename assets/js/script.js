@@ -9,6 +9,7 @@ $(document).ready(() => {
 	init();
 });
 $(window).bind('mousedown touchend', (e) => {
+	if($(e.target).is('a')) return;
   stamp(e);
 });
 $(window).resize(() => {});

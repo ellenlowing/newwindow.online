@@ -25,6 +25,17 @@ html, body {
 }
 main {
   margin: 0 2vw;
+  /* height: 80vw;
+  max-height: 80vw; */
+  /* margin-bottom: -20vw; */
+}
+a,
+a:active,
+a:visited {
+  outline: none;
+  text-decoration: none;
+  /* color: purple; */
+  /* -webkit-text-stroke-color: purple; */
 }
 .heartglobe {
   cursor: url('../img/stickers/heartglobe64.png') 32 32, auto;
@@ -53,6 +64,7 @@ h1 {
 .iframe-wrapper {
   position: relative;
   padding-bottom: 56.25%;
+  margin: 0 5vw;
 }
 iframe {
   width: 100%;
@@ -65,14 +77,18 @@ iframe {
   position: absolute;
 }
 .content {
-  display: grid;
-  grid-template-columns: 60% 40%;
+  /* display: grid;
+  grid-template-columns: 60% 40%; */
   position: relative;
 }
-.content-right {
-  padding-top: 25vw;
-  height: calc(70vw * 0.6);
-  overflow: hidden;
+.content-bottom {
+  /* padding-top: 5vw; */
+  /* padding-bottom: -10vw; */
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.content-stickers {
+  height: 0;
 }
 .marquee-container {
   padding: 3vw 0 6vw 0;
@@ -274,11 +290,13 @@ iframe {
 
 .content-stickers {
   position: absolute;
+
 }
 .sticker {
   display: none;
   height: auto;
   position: absolute;
+  /* overflow: hidden; */
   width: 64px;
   z-index: 0;
 }
@@ -292,7 +310,7 @@ iframe {
       transform: translate(calc(-140vw),0);
     }
   }
-  html, body {
+  main {
     margin: 0 3vw;
   }
   h1 {
@@ -302,9 +320,8 @@ iframe {
     display: block;
     grid-template-columns: unset;
   }
-  .content-right {
-    height: auto;
-    padding-top: 6vw;
+  .content-bottom {
+    display: block;
   }
   .marquee {
     animation-duration: 12s;
@@ -325,16 +342,10 @@ iframe {
     transform-origin: center;
   }
   .social-container {
-    height: 75vw;
+    height: 60vw;
     margin: 0 auto;
-    margin-top: -12vw;
-    transform: scale(1.3, 1.3);
+    margin-bottom: 6vw;
+    transform: scale(1.25, 1.25);
     transform-origin: top left;
-  }
-  #social-container-og {
-    display: none;
-  }
-  #social-container-clone {
-    display: block;
   }
 }
