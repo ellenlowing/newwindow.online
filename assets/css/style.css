@@ -168,6 +168,41 @@ iframe {
   height: 35vw;
 }
 .social-item {
+  display: block;
+  color: #000;
+  font-size: 3vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+}
+.social-item:hover {
+  color: black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+#social-ig {
+  margin-top: 8%;
+  left: 4%;
+}
+#social-fb {
+  margin-top: 40%;
+  left: 2%;
+}
+#social-sc {
+  margin-top:48%;
+  left: 40%;
+}
+#social-sp {
+  margin-top: 27%;
+  left:25%;
+}
+#social-am {
+  margin-top: 16%;
+  left: 40%;
+}
+/* .social-item {
   background-position: 0 0;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -235,7 +270,7 @@ iframe {
 }
 #social-am:hover {
   background-position: 0 2.92vw;
-}
+} */
 
 .content-stickers {
   position: absolute;
@@ -259,6 +294,9 @@ iframe {
   }
   html, body {
     margin: 0 3vw;
+  }
+  h1 {
+    -webkit-text-stroke-width: 0.5px;
   }
   .content {
     display: block;
