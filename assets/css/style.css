@@ -86,12 +86,11 @@ h1 {
 .iframe-wrapper {
   position: relative;
   padding-bottom: 56.25%;
-  margin: 0 5vw;
 }
 iframe {
   width: 90%;
   height: 90%;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   top: 0;
   left: 50%;
   margin-left: -45%;
@@ -106,7 +105,7 @@ iframe {
   position: relative;
 }
 .content-bottom {
-  /* padding-top: 5vw; */
+  margin-top: -4vw;
   /* padding-bottom: -10vw; */
   display: grid;
   grid-template-columns: 60% 40%;
@@ -289,6 +288,7 @@ iframe {
   }
   .content-bottom {
     display: block;
+    margin-top: 0;
   }
   .iframe-wrapper {
     margin:0;
